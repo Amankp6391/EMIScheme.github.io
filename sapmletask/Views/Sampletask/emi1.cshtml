@@ -1,0 +1,184 @@
+﻿@{
+    ViewBag.Title = "emi1";
+    Layout = "~/Views/Shared/sample.cshtml";
+}
+@using sapmletask.Models;
+@using System.Data
+@{
+    DBLayer db = new DBLayer();
+}
+
+<div class="col-sm-10 mx-auto p-1"  style="border:2px solid blue; font-family:serif;margin-top:3%; background-color:aliceblue">
+    <div class="row container-fluid">
+        <div class="col-sm-4">
+            <form method="post">
+                <div class="fw-bold my-0" style="border: 2px solid #e2dcdc; border-radius: 4px 4px; font-family: serif; margin-left: -3%; margin-right: 4%; background-color: white; font-size: 15px">
+                    <div class="mx-auto p-1">
+                        <h2 class="fw-6" style="text-shadow: 0px 2px 3px gray;">
+                            Create Scheme
+                        </h2><hr />
+                        <div class="row m-1">
+                            <div class="col-5">
+                                Select Plan Name
+                            </div>
+                            <div class="col-7">
+                                <select name="plan" class="form-select form-control mb-2" id="plan" required>
+                                    <option selected disabled value="">--Select Scheme--</option>
+                                    @{ string query1 = "select * from master1";
+                                        DataTable dt1 = db.GetAllRecord(query1);
+                                        if (dt1.Rows.Count > 0)
+                                        {
+                                            for (int i = 0; i < dt1.Rows.Count; i++)
+                                            {
+                                                <option>@dt1.Rows[i]["plane_name"]</option>
+                                            }
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row m-1">
+                            <div class="col-5">
+                                Tenure
+                            </div>
+                            <div class="col-7">
+                                <input type="text" class="form-control mb-2" id="tenure" name="tenure" readonly />
+                            </div>
+                        </div>
+                        <div class="row m-1">
+                            <div class="col-5">
+                                ROI(%)
+                            </div>
+                            <div class="col-7">
+                                <input type="text" class="form-control mb-2" id="roi" name="roi" readonly />
+                            </div>
+                        </div>
+                        <div class="row m-1">
+                            <div class="col-5">
+                                Enter Loan Amount
+                            </div>
+                            <div class="col-7">
+                                <input type="text" class="form-control mb-2" id="loanam" name="loanam" />
+                            </div>
+                        </div>
+                        <div class="row m-1">
+                            <div class="col-5">
+                                Loan Date
+                            </div>
+                            <div class="col-7">
+                                <input type="date" class="form-control mb-1" id="loandt" name="loandt" required />
+                                <button type="button" class="btn btn-primary btn-sm float-end mb-1" onclick="Getdt()">Calculate EMI</button>
+                            </div>
+                        </div>
+                        <div class="row m-1">
+                            <div class="col-5">
+                                EMI Amount
+                            </div>
+                            <div class="col-7">
+                                <input type="text" class="form-control mb-2" id="emiam" name="emiam" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row fw-bold" style="border-top: 2px solid #e2dcdc;margin:0%; background-color: whitesmoke">
+                        <div class="col-sm-7">
+                        </div>
+                        <div class="col-sm-5 p-2">
+                            <input type="button" id="btn" onclick="Gettbl()" value="Generate Schedule" class="btn btn-success w-100" />
+                            @Html.ActionLink("Back to EMI Scheme", "master1")
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-8 mx-0 container-fluid" style="border: 2px solid #e2dcdc;border-radius:4px 4px; font-family: serif; background-color:white;font-size:15px;height:70px">
+            <table class="col-sm-12 table-bordered  border border-2 border-aliceblue text-center" id="emiTable" style="margin-top:1%">
+                <thead>
+                    <tr class="p-4 text-light" style="background:black;font-size:20px;">
+                        <th>Emi No</th>
+                        <th>Due Date</th>
+                        <th>EMI Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#plan').on('change', function () {
+            var plan = $(this).val();
+            $.ajax({
+                url: '/Sampletask/FetchData',
+                type: 'Get',
+                data: { plan: plan },
+                success: function (data) {
+                    var jsonarray = JSON.parse(data);
+                    if (jsonarray.length != 0) {
+                        var datetimeString = jsonarray[0].datetime;
+                        var dateObject = new Date(datetimeString);
+                        var dateOnly = dateObject.toISOString().split('T')[0];
+                        $('input[name="plan"]').val(jsonarray[0].plan);
+                        $('input[name="tenure"]').val(jsonarray[0].tenure);
+                        $('input[name="roi"]').val(jsonarray[0].ROI);
+                    }
+                    else {
+                        $('input[name="tenure"]').val("");
+                        $('input[name="roi"]').val("");
+                        $('input[name="plan"]').val("");
+                    }
+                },
+                error: function () {
+                    alert('failed to fetch data');
+                }
+            });
+        });
+    });
+</script>
+<script>
+    function reset() {
+        $('#plan').empty();
+        $('#tenure').empty('');
+        $('#roi').empty();
+    }
+</script>
+<script>
+        function Getdt() {
+
+            var p = parseFloat(document.getElementById('loanam').value);
+            var r = parseFloat(document.getElementById('roi').value);
+            var t = parseFloat(document.getElementById('tenure').value);
+            var a = r / 100;
+            var b = a * p;
+            var emiam = (b + p) / t;
+            document.getElementById('emiam').value = emiam;
+        }
+    </script>
+<script>
+           function Gettbl() {
+               var t = parseFloat(document.getElementById('tenure').value);
+               var loandt = new Date(document.getElementById('loandt').value);
+               var emiam = parseFloat(document.getElementById('emiam').value);
+              var emiTable = document.getElementById('emiTable').getElementsByTagName('tbody')[0];
+               emiTable.innerHTML = '';
+               for (var i = 1; i <= t; i++) {
+                   var dueDate = new Date(loandt);
+                   dueDate.setMonth(dueDate.getMonth() + i - 1);
+                   var day = dueDate.getDate().toString().padStart(2, '0');
+                   var month = (dueDate.getMonth() + 1).toString().padStart(2, '0');
+                   var year = dueDate.getFullYear();
+                   var formattedDueDate = `${day}-${month}-${year}`;
+                   emiTable.innerHTML += '<tr>' +
+                       '<td>' + i + '</td>' +
+                       '<td>' + formattedDueDate + '</td>' +
+                       '<td>' + emiam.toFixed(2) + '</td>' +
+                       '</tr>';
+               }
+               var rowCount = emiTable.rows.length;
+               var tableDiv = document.querySelector('.col-sm-8.container-fluid');
+               var height = rowCount *36;
+               tableDiv.style.height = height + 'px';
+                   tableDiv.style.backgroundColor = 'white';
+           }
+       </script>

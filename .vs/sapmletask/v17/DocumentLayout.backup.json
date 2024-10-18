@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AMAN\\Desktop\\All Dot Net Project folder\\TaskByCompany\\sapmletask\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A43CBC3C-17A2-411E-9372-A4F035D44D36}|sapmletask\\sapmletask.csproj|C:\\Users\\AMAN\\Desktop\\All Dot Net Project folder\\TaskByCompany\\sapmletask\\sapmletask\\views\\sampletask\\emi1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A43CBC3C-17A2-411E-9372-A4F035D44D36}|sapmletask\\sapmletask.csproj|solutionrelative:sapmletask\\views\\sampletask\\emi1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A43CBC3C-17A2-411E-9372-A4F035D44D36}|sapmletask\\sapmletask.csproj|C:\\Users\\AMAN\\Desktop\\All Dot Net Project folder\\TaskByCompany\\sapmletask\\sapmletask\\models\\dblayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A43CBC3C-17A2-411E-9372-A4F035D44D36}|sapmletask\\sapmletask.csproj|solutionrelative:sapmletask\\models\\dblayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A43CBC3C-17A2-411E-9372-A4F035D44D36}|sapmletask\\sapmletask.csproj|c:\\users\\aman\\desktop\\all dot net project folder\\taskbycompany\\sapmletask\\sapmletask\\controllers\\sampletaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A43CBC3C-17A2-411E-9372-A4F035D44D36}|sapmletask\\sapmletask.csproj|solutionrelative:sapmletask\\controllers\\sampletaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A43CBC3C-17A2-411E-9372-A4F035D44D36}|sapmletask\\sapmletask.csproj|C:\\Users\\AMAN\\Desktop\\All Dot Net Project folder\\TaskByCompany\\sapmletask\\sapmletask\\views\\sampletask\\master1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A43CBC3C-17A2-411E-9372-A4F035D44D36}|sapmletask\\sapmletask.csproj|solutionrelative:sapmletask\\views\\sampletask\\master1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "master1.cshtml",
+              "DocumentMoniker": "C:\\Users\\AMAN\\Desktop\\All Dot Net Project folder\\TaskByCompany\\sapmletask\\sapmletask\\Views\\Sampletask\\master1.cshtml",
+              "RelativeDocumentMoniker": "sapmletask\\Views\\Sampletask\\master1.cshtml",
+              "ToolTip": "C:\\Users\\AMAN\\Desktop\\All Dot Net Project folder\\TaskByCompany\\sapmletask\\sapmletask\\Views\\Sampletask\\master1.cshtml",
+              "RelativeToolTip": "sapmletask\\Views\\Sampletask\\master1.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002242|",
+              "WhenOpened": "2024-10-18T17:22:35.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "emi1.cshtml",
+              "DocumentMoniker": "C:\\Users\\AMAN\\Desktop\\All Dot Net Project folder\\TaskByCompany\\sapmletask\\sapmletask\\Views\\Sampletask\\emi1.cshtml",
+              "RelativeDocumentMoniker": "sapmletask\\Views\\Sampletask\\emi1.cshtml",
+              "ToolTip": "C:\\Users\\AMAN\\Desktop\\All Dot Net Project folder\\TaskByCompany\\sapmletask\\sapmletask\\Views\\Sampletask\\emi1.cshtml",
+              "RelativeToolTip": "sapmletask\\Views\\Sampletask\\emi1.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T17:22:35.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DBLayer.cs",
+              "DocumentMoniker": "C:\\Users\\AMAN\\Desktop\\All Dot Net Project folder\\TaskByCompany\\sapmletask\\sapmletask\\Models\\DBLayer.cs",
+              "RelativeDocumentMoniker": "sapmletask\\Models\\DBLayer.cs",
+              "ToolTip": "C:\\Users\\AMAN\\Desktop\\All Dot Net Project folder\\TaskByCompany\\sapmletask\\sapmletask\\Models\\DBLayer.cs",
+              "RelativeToolTip": "sapmletask\\Models\\DBLayer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T17:22:35.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SampletaskController.cs",
+              "DocumentMoniker": "C:\\Users\\AMAN\\Desktop\\All Dot Net Project folder\\TaskByCompany\\sapmletask\\sapmletask\\Controllers\\SampletaskController.cs",
+              "RelativeDocumentMoniker": "sapmletask\\Controllers\\SampletaskController.cs",
+              "ToolTip": "C:\\Users\\AMAN\\Desktop\\All Dot Net Project folder\\TaskByCompany\\sapmletask\\sapmletask\\Controllers\\SampletaskController.cs",
+              "RelativeToolTip": "sapmletask\\Controllers\\SampletaskController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T17:22:35.928Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

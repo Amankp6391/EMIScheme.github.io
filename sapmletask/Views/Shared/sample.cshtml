@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: serif;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+
+        ul li a:hover {
+            background: lightblue;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg " style="background: #099ffc;">
+            <div class="container-fluid">
+                <a href="/admin/adminprofile">
+                    <img src="~/Content/ho3.jpg" style="height: 50px; width: 50px; margin-top: 3px;" class="rounded rounded-circle" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" href="/Sampletask/master1" style="font-size: 22px; font-weight: bold; margin-right: 20px; margin-left: 10px;">Master Plan1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/Sampletask/emi1" style="font-size: 20px; font-weight: bold; margin-right: 20px">EMI Schedul1</a>
+                        </li>   
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        @RenderBody()
+        <div class="footer">
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET College Management Project</p>
+            </footer>
+        </div>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </div>
+</body>
+</html>

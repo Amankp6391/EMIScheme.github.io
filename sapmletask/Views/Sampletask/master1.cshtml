@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "master1";
+    Layout = "~/Views/Shared/sample.cshtml";
+}
+<div class="col-sm-4 mx-auto p-1 fw-bold" style="font-family:serif;margin-top:7%; background-color:aliceblue">
+    <div class="col-sm-12  fw-bold" style="border: 2px solid #e2dcdc;border-radius:4px 4px; font-family: serif; margin:0%; background-color:white;font-size:20px">
+        <form method="post">
+            <div class="mx-auto p-3">
+                <h2 class="fw-6" style="text-shadow: 0px 2px 3px gray;">
+                    EMI Scheme
+                </h2><hr />
+                <div class="row m-3">
+                    <div class="col-5">
+                        Plan Name
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="form-control mb-2" id="plan" name="plan" required/>
+                        <span id="spmail"></span>
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col-5">
+                        Tenure(Months)
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="form-control mb-2" id="tenure" name="tenure" required />
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col-5">
+                        ROI(%)
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="form-control mb-2" id="roi" name="roi" required/>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-sm-12  fw-bold" style="border-top: 2px solid #e2dcdc;margin: 0%; background-color: whitesmoke">
+                <div class="col-sm-10">
+                </div>
+                <div class="col-sm-2 p-2">
+                    <input type="submit" id="btn" value="Save" class="btn btn-success w-100" />
+
+                </div>
+                <p style="text-align:center;">  @Html.ActionLink("Create Scheme", "emi1")</p>
+            </div>
+        </form>
+    </div>
+</div>
+
+
